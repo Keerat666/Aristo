@@ -1,0 +1,226 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Upswyft",
+        "description": "Backend for Upswyft",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:8000",
+    "basePath": "/api/v1",
+    "tags": [{
+        "name": "Users",
+        "description": "API for users in the system"
+    }],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/users/saveUser": {
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "description": "Create new user in system",
+                "parameters": [{
+                    "name": "user",
+                    "in": "body",
+                    "description": "User that we want to create",
+                    "schema": {
+                        "$ref": "#/definitions/User"
+                    }
+                }],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "New user is created",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            }
+
+        },
+        "/users/upload_photo": {
+            "post": {
+                "tags": [
+                    "User ID"
+                ],
+                "description": "Save ID to Cloudinary",
+                "parameters": [{
+                    "image": "Image to be uploaded",
+                    "schema": {
+                        "$ref": "#/definitions/User"
+                    }
+                }],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Image is saved to Cloudinary",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            }
+
+        },
+        "/users/allUsers": {
+
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Get all users in system",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Users"
+                        }
+                    }
+                }
+            }
+        },
+
+        "/users/UserByID": {
+            "parameters": [{
+                "name": "_id",
+                "in": "query",
+                "required": true,
+                "description": "ID of user that we want to find",
+                "type": "string"
+            }],
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Get user with given ID",
+                "responses": {
+                    "200": {
+                        "description": "User is found",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    },
+
+                    "500": {
+                        "description": "Invalid ID format"
+                    }
+                }
+            }
+        },
+
+        "/users/editUser": {
+            "parameters": [{
+                    "name": "data",
+                    "in": "body",
+                    "required": true,
+                    "description": "ID of user that we want to find",
+                    "type": "object"
+                },
+                {
+                    "name": "_id",
+                    "in": "body",
+                    "required": true,
+                    "description": "ID of user that we want to edit",
+                    "type": "string"
+                }
+            ],
+            "put": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Edit user with given ID",
+                "responses": {
+                    "200": {
+                        "description": "User is found",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    },
+
+                    "500": {
+                        "description": "Invalid ID format"
+                    }
+                }
+            }
+        },
+
+        "/users/deleteUser": {
+            "parameters": [{
+                "name": "_id",
+                "in": "body",
+                "required": true,
+                "description": "ID of user that we want to delete",
+                "type": "string"
+            }],
+            "delete": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Deletes user with given ID",
+                "responses": {
+                    "201": {
+                        "description": "User is deleted",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    },
+
+                    "500": {
+                        "description": "Invalid ID format"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "User": {
+            "required": [
+                "full_name",
+                "phone_no",
+                "email",
+                "password",
+                "gender",
+                "profile_picture"
+            ],
+            "properties": {
+                "_id": {
+                    "type": "string",
+                    "uniqueItems": true
+                },
+                "id_created_at": {
+                    "type": "date"
+
+                },
+                "gender": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "profile_picture": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
