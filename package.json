@@ -1,5 +1,5 @@
 {
-    "name": "Autopilot",
+    "name": "Aristo",
     "version": "1.0.0",
     "description": "",
     "main": "app.js",
@@ -8,9 +8,9 @@
         "start": "node ./bin/www"
     },
     "keywords": [
-        "AutoPilot"
+        "Aristo"
     ],
-    "author": "AutoPilot",
+    "author": "Aristo",
     "license": "ISC",
     "dependencies": {
         "@admin-bro/express": "^3.1.0",
@@ -32,5 +32,8 @@
         "swagger-stats": "^0.99.1",
         "swagger-ui-express": "^4.1.6",
         "tslib": "^2.1.0"
+    },
+    "engines": {
+        "node": "18.x"
     }
 }
