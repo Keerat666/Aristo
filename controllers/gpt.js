@@ -61,6 +61,8 @@ module.exports={
           "result": [],
         }
 
+        Please do not return me a JSON which is starting like : "result": "\n{\n \"result\":. This format is completely wrong and do not use it in your final json text.
+
         Do not deviate from the response format that I have explained for any scenario.
         
         The code to be reviewed is as follows : 
