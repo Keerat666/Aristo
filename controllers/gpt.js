@@ -58,8 +58,10 @@ module.exports={
         If you have no comments on the code then return
         
         {
-          "result": []}",
+          "result": [],
         }
+
+        Do not deviate from the response format that I have explained for any scenario.
         
         The code to be reviewed is as follows : 
 
