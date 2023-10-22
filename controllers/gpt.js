@@ -45,7 +45,11 @@ module.exports={
      generatePrompt(code) {
 
 
-        return `Act as a senior developer and simulate a situation where you are reviewing a PR. Try to make only comments that are feasible and sensible and also tell me how can I resolve that comment and also return me a category for the comment telling me wether that comment is either of the three options in critcality : [High, Medium, Low] then return me a json which has an array of objects in the form , {response : [{fileName,lineNumber,comment,solutionToFixThatComment,category}]}
+        return `Act as a senior developer and simulate a situation where you are reviewing a PR. Try to make only comments that are feasible and sensible and also tell me how can I resolve that comment and also return me a category for the comment telling me wether that comment is either of the three options in critcality : [High, Medium, Low] then return me a json which has an array of objects in the form , {response : [{fileName,lineNumber,comment,solutionToFixThatComment,category}]}. An example array of objects that you can send is like this : 
+
+          {
+            "result": [{fileName : 'filename.js', lineNumber : 1, comment : 'Make sure to take care of other code readability and formatting issues.', solutionToFixThatComment : 'Use proper indentation and formatting to make code readable.', category : 'Low'}]}",
+          }
 
         Point out things like there should not be any code that is not being used. Take care of other code readability and formatting issues.
         
