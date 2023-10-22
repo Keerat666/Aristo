@@ -53,9 +53,15 @@ module.exports={
 
         Point out things like there should not be any code that is not being used. Take care of other code readability and formatting issues.
         
-        Only return me a json after doing the code review and nothing else. If you have no comments then return an empty array.Please do not return any text other than the final array and return the text in a form that if I do JSON.parse then I get a perfectly working json.If you have no comments or the code below is empty then return {response : []}
+        Only return me a json after doing the code review and nothing else. Please do not return any text other than text than the final array and return the text in a form that if I do JSON.parse then I get a perfectly working json object.
         
-        The code is as follows : 
+        If you have no comments on the code then return
+        
+        {
+          "result": []}",
+        }
+        
+        The code to be reviewed is as follows : 
 
         ${code}
 
