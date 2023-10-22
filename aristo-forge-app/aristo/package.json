@@ -1,0 +1,11 @@
+{
+    "name": "bitbucket-forge-aristo-app",
+    "version": "1.0.0",
+    "main": "index.jsx",
+    "license": "SEE LICENSE IN /LICENSE",
+    "private": true,
+    "dependencies": {
+        "@forge/api": "^2.19.3",
+        "@forge/ui": "^1.9.0"
+    }
+}

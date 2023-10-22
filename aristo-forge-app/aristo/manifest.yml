@@ -1,0 +1,21 @@
+modules:
+  'bitbucket:repoCodeOverviewCard':
+    - key: hello-world-app-hello-world-panel
+      function: main
+      title: Aristo 👨🏽‍💻
+  function:
+    - key: main
+      handler: index.run
+permissions:
+  scopes:
+    - "read:repository:bitbucket"
+    - "write:repository:bitbucket"
+    - "read:pullrequest:bitbucket"
+    - "write:pullrequest:bitbucket"
+    
+app:
+  id: ari:cloud:ecosystem::app/993ad354-6f8d-4a84-8400-ae4f390c7d27
+remotes:
+  - key: aristo
+    baseUrl: https://aristo-fzl2.onrender.com
+  
