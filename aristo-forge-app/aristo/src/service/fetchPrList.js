@@ -10,7 +10,6 @@ const getOpenPRs = async () => {
   const response = await fetch(apiUrl, {
     method: 'GET',
     headers: {
-      Authorization: 'Bearer ATCTT3xFfGN0Nq6PRspaSJ8zqLg0Fy9isN34lD4sUKigZUo0orHcixE4hiyP7XEj2_VYlWC5MiKk9dII5YXrLX-RHjuTx1Ma-aBNXY9NXFWLubjnfv58Vg2n5szaBN0IVNhWlU8V2we0zS4pvLk4AdRIMEWiIIlwdkUQXzrNCkfegBgzliG6-Vs=017E189F', // Replace with your access token
     },
   });
 
