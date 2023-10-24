@@ -12,7 +12,7 @@ const App = () => {
 
   useEffect(() => {
     // Make an API request to fetch the dropdown options
-    fetch('http://localhost:3008/api/fetchFiles')
+    fetch('https://aristo-fzl2.onrender.com/api/fetchFiles')
       .then((response) => response.json())
       .then((data) => {
         setDropdownOptions(data.dropdown);
@@ -40,7 +40,7 @@ var requestOptions = {
 };
 
 
-fetch("http://localhost:3008/api/fetchContent", requestOptions)
+fetch("https://aristo-fzl2.onrender.com/api/fetchContent", requestOptions)
   .then(response => response.text())
   .then(result => {
     const parsedResult = JSON.parse(result);
