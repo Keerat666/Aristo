@@ -11,6 +11,10 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+
+
+
+
 //Please don't delete this health API
 app.use('/api/health', (req, res) => {
     res.send('Hello Aristo!');
@@ -39,7 +43,7 @@ app.use('/api/health', (req, res) => {
 app.use(express.static(path.join(__dirname, 'ui/aristo-react-ui/build')));
 
 // Handle other routes and return the React app
-app.get('/*', (req, res) => {
+app.get('home/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'ui/aristo-react-ui/build/index.html'));
 });
 
