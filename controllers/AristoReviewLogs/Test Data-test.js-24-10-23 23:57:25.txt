@@ -1,0 +1,1 @@
+{"result":[{"fileName":"SimpleJavaBug.java","lineNumber":5,"comment":"Division by zero error.","solutionToFixThatComment":"Check for zero before dividing and handle it appropriately.","category":"High"},{"fileName":"SimpleJavaBug.java","lineNumber":3,"comment":"Unused variable, should be removed.","solutionToFixThatComment":"Remove the unused variable.","category":"Low"}]}

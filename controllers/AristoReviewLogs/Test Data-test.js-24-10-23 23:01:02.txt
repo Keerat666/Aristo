@@ -1,0 +1,1 @@
+{"result":[{"fileName":"SimpleJavaBug.java","lineNumber":5,"comment":"You cannot divide a number by zero, this might lead to a runtime error.","solutionToFixThatComment":"Check the value of the denominator before performing the division and handle the situation accordingly.","category":"High"}]}
