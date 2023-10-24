@@ -88,7 +88,6 @@ fetch("https://aristo-fzl2.onrender.com/api/fetchContent", requestOptions)
         <table className="table mt-3">
           <thead>
             <tr>
-              <th>File Name</th>
               <th>Line</th>
               <th>Comment</th>
               <th>Suggestion for Fix</th>
@@ -98,7 +97,6 @@ fetch("https://aristo-fzl2.onrender.com/api/fetchContent", requestOptions)
           <tbody>
             {tableData.map(item => (
               <tr key={item.fileName}>
-                <td>{item.fileName}</td>
                 <td>{item.lineNumber}</td>
                 <td>{item.comment}</td>
                 <td>{item.solutionToFixThatComment}</td>
