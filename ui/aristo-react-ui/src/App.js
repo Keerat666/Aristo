@@ -120,7 +120,7 @@ fetch("https://aristo-fzl2.onrender.com/api/fetchContent", requestOptions)
           <h4>Learn more about my story.</h4>
           <ol>
             <li><a rel="noopener" href="https://blog.openai.com/aristo" target="_blank">Medium Article about why I came into existence</a></li>
-            <li><a rel="noopener" href="https://github.com/openai/aristo" target="_blank">Devpost Project Page</a></li>
+            <li><a rel="noopener" href="https://devpost.com/software/aristo-psat01" target="_blank">Devpost Project Page</a></li>
           </ol>
         </div>
         <div className="col-md-6">
