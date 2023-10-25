@@ -108,8 +108,12 @@ fetch("https://aristo-fzl2.onrender.com/api/fetchContent", requestOptions)
         </table>
       )}
 
-<h4 style={{ marginTop: '40px' }} >Demo Video on Youtube</h4>
-<iframe style={{ marginTop: '20px' }} width="560" height="315" src="https://www.youtube.com/embed/whfNkBzk9vM?si=8LNW1Qyxao_9sCKt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h4 style={{ marginTop: '40px' }} >Demo Video </h4>
+<div className='row'>
+  <div className='col-md-12'>
+  <iframe style={{ marginTop: '10px' }} width="560" height="315" src="https://www.youtube.com/embed/whfNkBzk9vM?si=8LNW1Qyxao_9sCKt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</div>
 
       <div className="row" style={{ marginTop: '40px' }}>
         <div className="col-md-6">
